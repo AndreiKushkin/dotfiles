@@ -4,6 +4,7 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
+Plugin 'rhysd/vim-clang-format'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
