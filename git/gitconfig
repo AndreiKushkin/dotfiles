@@ -2,14 +2,14 @@
 	name = Andrei Marshalov
 	email = andrei.marshalov@emlid.com
 [alias]
-    lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    unstage = reset HEAD
-    st = status -sb
-    undo = checkout --
-    subupdate = submodule update --init --recursive
-    cpick = cherry-pick
-    branchdate =  ! ~/.git/helpers/git-branchdate-helper
-    co = checkout
+	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	unstage = reset HEAD
+	st = status -sb
+	undo = checkout --
+	subupdate = submodule update --init --recursive
+	cpick = cherry-pick
+	branchdate =  ! ~/.git/helpers/git-branchdate-helper
+	co = checkout
 	cm = commit
 	br = branch
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
