@@ -9,7 +9,12 @@
     subupdate = submodule update --init --recursive
     cpick = cherry-pick
     branchdate =  ! ~/.git/helpers/git-branchdate-helper
-
+    co = checkout
+	cm = commit
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
 [merge]
 	tool = vimdiff
 	ff = only
