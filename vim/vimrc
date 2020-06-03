@@ -50,8 +50,8 @@ set showmatch
 
 " indention
 set smartindent
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set noexpandtab
 
@@ -66,3 +66,5 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2
 
 autocmd FileType gitcommit setlocal spell
+autocmd FileType gitcommit set colorcolumn=72
+autocmd FileType gitcommit execute 'normal $'

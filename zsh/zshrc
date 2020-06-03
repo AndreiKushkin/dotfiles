@@ -27,6 +27,8 @@ vi-mode
 zsh-autosuggestions
 history-search-multi-word
 pip
+shrink-path
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -56,3 +58,14 @@ esac
 export GCC_COLORS=auto
 stty -ixon
 ACK_PAGER=less
+
+export HOMEBREW_GITHUB_API_TOKEN=8d22d811ebc1a69766981d425e07d2dc7e918c6c
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
+export PATH="/usr/local/opt/swig@3/bin:$PATH"
+if [ -d "$HOME/Library/Android/sdk/platform-tools" ] ; then
+ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+fi
+export PATH=$PATH:$HOME/Documents/myProjects/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/Users/and_marsh/.cargo/bin:$PATH"
