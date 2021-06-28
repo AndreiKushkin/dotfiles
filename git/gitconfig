@@ -11,10 +11,15 @@
 	branchdate =  ! ~/.git/helpers/git-branchdate-helper
 	co = checkout
 	cm = commit
+	cmd = commit -m 'geodata-core: draft'
 	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
+	ff = "!f() {\
+		FILE=\"${GIT_PREFIX}/$1\";\
+		shift;\
+		git add ${FILE} \"$@\";\
+		git cm --fixup=$(git --no-pager log -1 --pretty=format:%h -- ${FILE});\
+	}; f"	
+	clean-utracked = clean -fd 	
 [merge]
 	tool = vimdiff
 	ff = only
