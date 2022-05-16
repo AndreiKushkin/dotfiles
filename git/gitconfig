@@ -14,8 +14,10 @@
 	cmd = commit -m 'geodata-core: draft'
 	br = branch
 	ff = "!f() {\
+		set -x;\
 		FILE=\"${GIT_PREFIX}/$1\";\
 		shift;\
+		echo $FILE;\
 		git add ${FILE} \"$@\";\
 		git cm --fixup=$(git --no-pager log -1 --pretty=format:%h -- ${FILE});\
 	}; f"	
@@ -30,3 +32,5 @@
 	ui = auto
 [gpg]
 	program = gpg2
+[push]
+	default = current

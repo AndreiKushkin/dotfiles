@@ -29,7 +29,10 @@ history-search-multi-word
 pip
 shrink-path
 zsh-syntax-highlighting
+autojump
 )
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,6 +52,7 @@ alias waf="$PWD/modules/waf/waf-light"
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
 alias realpath='python -c "import os; import sys; print(os.path.realpath(sys.argv[1]))"'
 alias pip='pip3'
+alias xargs='xargs ' # aliased commands passed to xargs will be expanded
 
 case `uname` in
       Darwin)
@@ -68,6 +72,16 @@ export PATH="/usr/local/opt/swig@3/bin:$PATH"
 if [ -d "$HOME/Library/Android/sdk/platform-tools" ] ; then
  export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 fi
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$PATH:$HOME/Documents/myProjects/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/and_marsh/.cargo/bin:$PATH"
+
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+
+# default to Java 11
+java11
