@@ -12,10 +12,11 @@
 	co = checkout
 	cm = commit
 	cmd = commit -m 'geodata-core: draft'
+	cmf = commit --fixup 
 	br = branch
 	ff = "!f() {\
 		set -x;\
-		FILE=\"${GIT_PREFIX}/$1\";\
+		FILE=\"./${GIT_PREFIX}/$1\";\
 		shift;\
 		echo $FILE;\
 		git add ${FILE} \"$@\";\
@@ -34,3 +35,8 @@
 	program = gpg2
 [push]
 	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
