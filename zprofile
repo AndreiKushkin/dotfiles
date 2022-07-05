@@ -17,3 +17,4 @@ for file in "$HOME"/.zprofile.d/*; do
 done
 
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
