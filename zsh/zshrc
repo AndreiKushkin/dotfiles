@@ -25,7 +25,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git
 vi-mode
 zsh-autosuggestions
-history-search-multi-word
+H-S-MW
 pip
 shrink-path
 zsh-syntax-highlighting
@@ -50,7 +50,7 @@ HISTFILE=~/.zsh_history
 alias rsp='rsync -vP'
 alias waf="$PWD/modules/waf/waf-light"
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
-alias realpath='python -c "import os; import sys; print(os.path.realpath(sys.argv[1]))"'
+alias realpath='python3 -c "import os; import sys; print(os.path.realpath(sys.argv[1]))"'
 alias pip='pip3'
 alias xargs='xargs ' # aliased commands passed to xargs will be expanded
 
@@ -64,24 +64,31 @@ export GCC_COLORS=auto
 stty -ixon
 ACK_PAGER=less
 
-#export HOMEBREW_GITHUB_API_TOKEN=8d22d811ebc1a69766981d425e07d2dc7e918c6c
 export HOMEBREW_GITHUB_API_TOKEN=8909cfa3fe297c1860a23f760d61e6ec2b5d3853
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
-export PATH="/usr/local/opt/swig@3/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 if [ -d "$HOME/Library/Android/sdk/platform-tools" ] ; then
  export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 fi
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=$PATH:$HOME/Documents/myProjects/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
+
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Users/and_marsh/.cargo/bin:$PATH"
 
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+# export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+# export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
+# alias java8='export JAVA_HOME=$JAVA_8_HOME'
+# alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
 # default to Java 11
-java11
+# java11
+export JAVA_HOME="/opt/homebrew/opt/openjdk@11"
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
+export ANDROID_SDK_ROOT="/Users/and_marsh/Library/Android/sdk"
+export ANDROID_HOME="/Users/and_marsh/Library/Android/sdk"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
