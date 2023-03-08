@@ -9,13 +9,13 @@
 	url = https://github.com/tmux-plugins/tpm
 [submodule "zsh/history-search-multi-word"]
 	path = zsh/history-search-multi-word
-	url = https://github.com:zdharma/history-search-multi-word.git
+	url = https://github.com/zdharma/history-search-multi-word.git
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting
-	url = https://github.com:zsh-users/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh/H-S-MW"]
 	path = zsh/H-S-MW
-	url = https://github.com:z-shell/H-S-MW.git
+	url = https://github.com/z-shell/H-S-MW.git
