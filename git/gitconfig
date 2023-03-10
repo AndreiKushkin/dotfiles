@@ -1,14 +1,23 @@
 [user]
-	name = Andrei Marshalov
-	email = andrei.marshalov@emlid.com
+	name = Andrei Kushkin
+	email = andrei.kushkin@emlid.com
 [alias]
 	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	unstage = reset HEAD
 	st = status -sb
 	undo = checkout --
 	subupdate = submodule update --init --recursive
-	cpick = cherry-pick
+	cp = cherry-pick
 	branchdate =  ! ~/.git/helpers/git-branchdate-helper
+	gs  =  status
+	ga  =  add
+	gb  =  branch
+	gc  =  commit
+	gd  =  dif
+	gco =  checkout
+	got = git
+	get  = git
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	co = checkout
 	cm = commit
 	cmd = commit -m 'geodata-core: draft'
@@ -29,6 +38,7 @@
 	conflictstyle = diff3
 [core]
 	excludesfile = ~/.gitignore
+	editor = vim
 [color]
 	ui = auto
 [gpg]
