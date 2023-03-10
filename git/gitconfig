@@ -9,12 +9,9 @@
 	subupdate = submodule update --init --recursive
 	cp = cherry-pick
 	branchdate =  ! ~/.git/helpers/git-branchdate-helper
-	gs  =  status
-	ga  =  add
-	gb  =  branch
-	gc  =  commit
-	gd  =  dif
-	gco =  checkout
+	st  =  status
+	a  =  add
+	df  =  dif
 	got = git
 	get  = git
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
